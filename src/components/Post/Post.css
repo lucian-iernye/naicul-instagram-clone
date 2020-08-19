@@ -1,0 +1,15 @@
+.post {
+  padding: 5px;
+  margin: 30px 20px;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+.post__image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.post__text {
+  font-weight: normal;
+}
