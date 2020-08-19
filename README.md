@@ -1,2 +1,2 @@
 # naicul-instagram-clone
-Instgram Clone
+Instagram Clone
