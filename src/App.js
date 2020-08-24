@@ -4,7 +4,7 @@ import Post from "./components/Post/Post";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       {/* Header */}
       <div className="app__header">
         <img
