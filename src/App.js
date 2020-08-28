@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
 import Post from "./components/Post/Post";
+import { useState } from "react";
 
 function App() {
+  const [posts, setPosts] = useState([]);
+
   return (
     <div className="app">
       {/* Header */}
@@ -14,14 +17,26 @@ function App() {
         />
       </div>
       <h1>Welcome!</h1>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post
+        username="Lucian"
+        caption="Caption here"
+        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
+      />
+      <Post
+        username="Lucian"
+        caption="Caption here"
+        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
+      />
+      <Post
+        username="Lucian"
+        caption="Caption here"
+        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
+      />
+      <Post
+        username="Lucian"
+        caption="Caption here"
+        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
+      />
     </div>
   );
 }

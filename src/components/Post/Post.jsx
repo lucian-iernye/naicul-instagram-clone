@@ -2,7 +2,7 @@ import React from "react";
 import "./Post.css";
 import Avatar from "@material-ui/core/Avatar";
 
-const Post = () => {
+const Post = ({ imageUrl, username, caption }) => {
   return (
     <>
       <div className="post">
@@ -12,15 +12,12 @@ const Post = () => {
             alt="username"
             src="/static/images/avatar"
           />
-          <h3>Lucian</h3>
+          <h3>{username}</h3>
         </div>
-        <img
-          className="post__image"
-          src="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
-          alt=""
-        />
+        <img className="post__image" src={imageUrl} alt={username} />
         <h4 className="post__text">
-          <strong>Lucian</strong> caption
+          <strong>{username} </strong>
+          {caption}
         </h4>
       </div>
     </>
