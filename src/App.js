@@ -4,7 +4,38 @@ import Post from "./components/Post/Post";
 import { useState } from "react";
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([
+    {
+      username: "Lucian",
+      caption: "Caption here",
+      imageUrl:
+        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
+    },
+    {
+      username: "Lucian",
+      caption: "Caption here",
+      imageUrl:
+        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
+    },
+    {
+      username: "Lucian",
+      caption: "Caption here",
+      imageUrl:
+        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
+    },
+    {
+      username: "Lucian",
+      caption: "Caption here",
+      imageUrl:
+        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
+    },
+    {
+      username: "Lucian",
+      caption: "Caption here",
+      imageUrl:
+        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
+    },
+  ]);
 
   return (
     <div className="app">
@@ -17,26 +48,14 @@ function App() {
         />
       </div>
       <h1>Welcome!</h1>
-      <Post
-        username="Lucian"
-        caption="Caption here"
-        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
-      />
-      <Post
-        username="Lucian"
-        caption="Caption here"
-        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
-      />
-      <Post
-        username="Lucian"
-        caption="Caption here"
-        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
-      />
-      <Post
-        username="Lucian"
-        caption="Caption here"
-        imageUrl="https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg"
-      />
+
+      {posts.map((post) => (
+        <Post
+          username={post.username}
+          caption={post.caption}
+          imageUrl={post.imageUrl}
+        />
+      ))}
     </div>
   );
 }
