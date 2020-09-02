@@ -1,41 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import Post from "./components/Post/Post";
 import { useState } from "react";
+import { db } from "./firebase";
 
 function App() {
-  const [posts, setPosts] = useState([
-    {
-      username: "Lucian",
-      caption: "Caption here",
-      imageUrl:
-        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
-    },
-    {
-      username: "Lucian",
-      caption: "Caption here",
-      imageUrl:
-        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
-    },
-    {
-      username: "Lucian",
-      caption: "Caption here",
-      imageUrl:
-        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
-    },
-    {
-      username: "Lucian",
-      caption: "Caption here",
-      imageUrl:
-        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
-    },
-    {
-      username: "Lucian",
-      caption: "Caption here",
-      imageUrl:
-        "https://miro.medium.com/max/3000/1*3f7gyFnHcBqrwXUe7bDILw.jpeg",
-    },
-  ]);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) => {
+      setPosts(snapshot.docs.map((doc) => doc.data()));
+    });
+  }, []);
 
   return (
     <div className="app">
