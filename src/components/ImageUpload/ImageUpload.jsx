@@ -56,13 +56,13 @@ const ImageUpload = ({ username }) => {
 
   return (
     <>
-      <div>
-        {/* I want to have : */}
-        {/* Caption input */}
-        {/* File picker */}
-        {/* Post button */}
+      <div className="imageUpload">
         <h2>Create post</h2>
-        <progress value={progress} max="100" />
+        <progress
+          className="imageUpload__progress"
+          value={progress}
+          max="100"
+        />
         <input
           type="text"
           placeholder="Enter a caption..."
