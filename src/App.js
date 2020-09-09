@@ -196,6 +196,12 @@ function App() {
         )}
       </div>
 
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Login to post an image...</h3>
+      )}
+
       {posts.map(({ id, post }) => (
         <Post
           key={id}
@@ -204,12 +210,6 @@ function App() {
           imageUrl={post.imageUrl}
         />
       ))}
-
-      {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
-      ) : (
-        <h3>Login to post an image...</h3>
-      )}
     </div>
   );
 }
