@@ -7,6 +7,7 @@ import { useState } from "react";
 import { db, auth } from "./firebase";
 import { Button, Input } from "@material-ui/core";
 import ImageUpload from "./components/ImageUpload/ImageUpload";
+import InstagramEmbed from "react-instagram-embed";
 
 // modal styles
 function getModalStyle() {
@@ -119,14 +120,14 @@ function App() {
 
         <Input
           placeholder="email"
-          type="text"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
         <Input
           placeholder="password"
-          type="text"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -150,14 +151,14 @@ function App() {
 
         <Input
           placeholder="email"
-          type="text"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
 
         <Input
           placeholder="password"
-          type="text"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -202,14 +203,34 @@ function App() {
         <h3>Login to post an image...</h3>
       )}
 
-      {posts.map(({ id, post }) => (
-        <Post
-          key={id}
-          username={post.username}
-          caption={post.caption}
-          imageUrl={post.imageUrl}
-        />
-      ))}
+      <div className="app__posts">
+        <div className="app__postsLeft">
+          {posts.map(({ id, post }) => (
+            <Post
+              key={id}
+              postId={id}
+              user={user}
+              username={post.username}
+              caption={post.caption}
+              imageUrl={post.imageUrl}
+            />
+          ))}
+        </div>
+        <div className="app__postsRight">
+          <InstagramEmbed
+            url="https://instagr.am/p/Zw9o4/"
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
+          />
+        </div>
+      </div>
     </div>
   );
 }
