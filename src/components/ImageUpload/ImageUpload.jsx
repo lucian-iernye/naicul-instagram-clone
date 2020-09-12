@@ -69,12 +69,18 @@ const ImageUpload = ({ username }) => {
           value={caption}
           onChange={(event) => setCaption(event.target.value)}
         />
-        <input
-          type="file"
-          name="file-upload"
-          id="file-upload"
-          onChange={handleChange}
-        />
+        <hr />
+
+        <div className="fileInput">
+          <input
+            type="file"
+            className="custom-file-input"
+            name="file-upload"
+            onChange={handleChange}
+            aria-label="File browser example"
+          />
+        </div>
+
         <Button onClick={handleUpload}>Upload</Button>
       </div>
     </>

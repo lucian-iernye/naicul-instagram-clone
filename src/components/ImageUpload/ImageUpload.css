@@ -4,11 +4,81 @@
   width: 60%;
   margin: 10px auto;
   background-color: white;
-  border-top: 1px solid lightgray;
-  /* position: fixed;
-  bottom: 0; */
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.imageUpload h2 {
+  font-size: 14px;
+  color: gray;
+  padding: 10px;
+}
+
+.imageUpload input[type="text"] {
+  text-align: center;
+  padding: 20px;
+  border: none;
+}
+
+.fileInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-file-input {
+  width: 150px;
+  color: transparent;
+  margin: 20px auto;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.custom-file-input::before {
+  content: "Select some files";
+  color: black;
+  display: inline-block;
+  background: linear-gradient(to left, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.custom-file-input:hover::before {
+  border-color: black;
+}
+
+.custom-file-input:active {
+  outline: 0;
+}
+
+.custom-file-input:active::before {
+  background: linear-gradient(to left, #e3e3e3, #f9f9f9);
+}
+
+@media screen and (min-width: 768px) {
+  .imageUpload {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .imageUpload {
+    width: 40%;
+  }
 }
 
 .imageUpload__progress {
   width: 100%;
+  height: 10px;
 }
