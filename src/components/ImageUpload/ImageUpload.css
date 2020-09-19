@@ -24,6 +24,7 @@
 .fileInput {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .custom-file-input {
@@ -52,6 +53,10 @@
   font-weight: 700;
   font-size: 10pt;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .custom-file-input:hover::before {

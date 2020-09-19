@@ -24,7 +24,7 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
   paper: {
     position: "absolute",
-    width: 400,
+    width: 300,
     backgroundColor: theme.palette.background.paper,
     border: "2px solid #000",
     boxShadow: theme.shadows[5],
@@ -198,9 +198,11 @@ function App() {
       </div>
 
       {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
+        <ImageUpload className="app__imageUpload" username={user.displayName} />
       ) : (
-        <h3>Login to post an image...</h3>
+        <div className="app__imageUploadHeaderDiv">
+          <h3 className="app__imageUploadHeader">Login to post an image...</h3>
+        </div>
       )}
 
       <div className="app__posts">
@@ -218,6 +220,7 @@ function App() {
         </div>
         <div className="app__postsRight">
           <InstagramEmbed
+            className="instagramEmbed"
             url="https://www.instagram.com/p/B8W-baOJu8R/?utm_source=ig_web_copy_link"
             maxWidth={320}
             hideCaption={false}

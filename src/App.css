@@ -1,5 +1,11 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  position: relative;
 }
 
 .app__header {
@@ -38,6 +44,25 @@
 @media screen and (min-width: 1024px) {
   .app__postsRight {
     display: initial;
-    /* position: fixed; */
   }
+}
+
+/* .instagramEmbed {
+  position: fixed;
+} */
+
+.app__imageUploadHeaderDiv {
+  width: 100vw;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.app__imageUploadHeader {
+  background-color: lightpink;
+  border-bottom: 1px solid lightgrey;
+  padding: 5px;
+  font-size: 14px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
