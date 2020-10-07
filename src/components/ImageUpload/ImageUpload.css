@@ -1,7 +1,7 @@
 .imageUpload {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  width: 60%;
   margin: 10px auto;
   background-color: white;
   border: 1px solid lightgray;
@@ -73,13 +73,13 @@
 
 @media screen and (min-width: 768px) {
   .imageUpload {
-    width: 50%;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .imageUpload {
-    width: 40%;
+    width: 100%;
   }
 }
 

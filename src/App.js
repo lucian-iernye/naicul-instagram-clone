@@ -198,7 +198,12 @@ function App() {
       </div>
 
       {user?.displayName ? (
-        <ImageUpload className="app__imageUpload" username={user.displayName} />
+        <div className="app__imageUploadContainer">
+          <ImageUpload
+            className="app__imageUpload"
+            username={user.displayName}
+          />
+        </div>
       ) : (
         <div className="app__imageUploadHeaderDiv">
           <h3 className="app__imageUploadHeader">Login to post an image...</h3>
